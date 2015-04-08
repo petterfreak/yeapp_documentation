@@ -371,7 +371,7 @@ This command compile the less files to css, that the app use. (app/styles/result
 CONTENT
 ================
 
-### HTML content
+### HTML structure
 
 YeApp's html main structure
 
@@ -391,30 +391,30 @@ YeApp's html main structure
         #page load(angular) preloader content
     </div>
 
-    #app root holder
+    #root holder
     <div class="mainApp">
 
-        #app header holder with angular controller
+        #header holder with angular controller
         <div class="mainAppHeader" ng-controller="AppheaderCtrl">
-            #app header content
+            #header content
         </div>
 
-        #app sidebar holder with angular controller and ui-router view definiton
+        #sidebar holder with angular controller and ui-router view definiton
         <div class="mainAppAside" ng-controller="AppsidebarCtrl" ui-view="mainSideBar">
-            #app sidebar content
+            #sidebar content
         <div>
 
-        #app page views to routes
+        #page views of routes
         <div class="mainAppContent" ui-view>
-            #app page content
+            #page content
         </div>
 
         #toaster directive to notifications
         <toaster-container></toaster-container>
         
-        #app slidedown holder
+        #slidedown holder
         <div class="slideDownSection">
-            #app slidedown content
+            #slidedown content
         </div>
 
         #scripts include
@@ -427,7 +427,9 @@ YeApp's html main structure
 
 ### Sidebar
 
-#### Main item
+ - you can find here: ___app/views/main-sidebar.html__
+
+#### Main sidebar structure
 
 ``` html
 <li ui-sref-active="active"> 
@@ -439,7 +441,8 @@ YeApp's html main structure
     </a>
 </li>
 ```
-- you can find this sctructure in the angular ui.router documentation http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-sref
+- you can find this sctructure in the angular ui.router documentation 
+http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-sref
 
 #### Collapse item
 
@@ -485,11 +488,11 @@ ide kell egy snippet hogyan kell letrehozni egy sidebar itemet
 
 #### Main header html
 
-__you can find here: app/views/main-header.html__
+ - you can find here: ___app/views/main-header.html__
 
-- __there is 2 div__
-  - ".navbar-header": this contains the logo & icons for mobile(xs) view
-  - "navbar-collapse": this contains the collapsible menu
+- __there is 2 holder div__
+  - "navbar-header": this contains the logo & navbar for mobile(xs) view
+  - "navbar-collapse": this contains the collapsible menu (separeted to 2 section)
 
 
 
