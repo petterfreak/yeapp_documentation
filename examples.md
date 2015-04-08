@@ -20,6 +20,7 @@ __File structure__
     >-- app/
     |   >-- dist/
     |   >-- dummy/
+    |   >-- fonts/
     |   >-- icons/
     |   >-- img/
     |   >-- js/
@@ -34,11 +35,15 @@ __File structure__
     |   >-- styles/
     |   >-- views/
     >-- bower_components/
+    >-- documentation/
+    >-- frontend-onepage/
     >-- less/
     |   >-- app/
     |   |   >-- themes/
     |   |   >-- helpers/
     |   >-- bootstrap/
+    |   >-- main.less
+    |   >-- landingpage.less
     >-- node_modules/ 
     >-- Gruntfile.js
     >-- bower.js
