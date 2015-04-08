@@ -439,7 +439,7 @@ YeApp's html main structure
     </a>
 </li>
 ```
-- you can find this sctructure in the angular ui.router documentation
+- you can find this sctructure in the angular ui.router documentation http://http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-sref
 
 #### Collapse item
 
@@ -474,8 +474,9 @@ YeApp's html main structure
 
 - as you can see the first line, you can define "ng-class" property here to detect this
 is collapsible item
+- $state is a global variable that contains the current tree items of the route. So this example shows if the $state include the "ui" word add the 'opened' class to li tag 
 - the collapse "a" html tag has a "collapse-menu" directive. It perform the collapse meachnism (open & close).
-- the child ul's first li has to be a "fold-header" 
+- the child ul's first li has to be a "fold-header", this tag is a fixed layout helper for the sidebar. (same as the parent collapse item)
 
 
 ide kell egy snippet hogyan kell letrehozni egy sidebar itemet
@@ -563,15 +564,13 @@ Konnyeden hozzaadhatsz ilyen js fajlokat:
 
 __Note for CSS and other files __: You have to register/include your own css and other custom asset files in the head of main index.html.
 
-
 ####__+Add new lazyload plugin__
 
-If you want to load files in run time, you have to define these files, in the OcLazyLoad's section arrays. 
+If you want to load files in run time, you have to define these files in the OcLazyLoad's section arrays. 
 
 Ha futasi idoben akarsz betolteni fajlokat, akkor azokat elsonek bekell jegyezned az OcLazyLoad szekcioban felsorolt require tombokbe
 
-
-### (Add) new controller/view
+### +Add new controller/view
 
  * __Controllers__ : __app/scripts/controllers__ folder
 
