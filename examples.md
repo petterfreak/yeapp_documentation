@@ -36,14 +36,14 @@ __File structure__
     |   >-- views/
     >-- bower_components/
     >-- documentation/
-    >-- frontend-onepage/
+    >-- frontend_onepage/
     >-- less/
     |   >-- app/
     |   |   >-- themes/
     |   |   >-- helpers/
     |   >-- bootstrap/
     |   >-- main.less
-    |   >-- landingpage.less
+    |   >-- frontend_onepage.less
     >-- node_modules/ 
     >-- Gruntfile.js
     >-- bower.js
@@ -59,14 +59,17 @@ Here you will find the concatenated JS files by grunt. (app.js & built.js)
 - __dummy/__
 This folder contains dummy json files for the demo pages
 
+- __fonts/__
+This folder contains fonts and their files
+
 - __icons/__
-This folder contains icons and icon files
+This folder contains icons and their files
 
 - __img/__
-Contains the theme images (dummy)
+This folder the theme images (dummy)
 
 - __js/__
-Here you will find JS files which does not have bower packages
+Here you will find JS files that do not have bower package wrapper
 
 - __lang/__
 This folder contains the json files use for translation.
@@ -74,23 +77,23 @@ This folder contains the json files use for translation.
 - __scripts/__
 Here you will find AngularJS files.
   - __controllers/__ 
-    contains the app's controllers
+    contains the controllers of the app
   - __directives/__
-    contains the app's directives
+    contains the directives of the app
   - __filters/__
-    contains the app's filters
+    contains the filters of the app
   - __app.js__
-    main root angular module and dependency container (set config and run options)
+    main root angular module and its dependency container (set config and run options)
   - __app_constants.js__
-    contains the app's lazy loading files (angular modules,controllers,jquery libs..etc)
+    contains the lazy loading files structure of the app (angular modules,controllers,jquery libs..etc)
   - __app_routes.js__
-    contains the app's routes (ui-router)
+    contains the routes of the app (ui-router)
 
 - __styles/__
-Contains the static css files generated for the app
+Contains the static css files generated for the app (from less)
 
 - __views/__
-This folder contains the html files for the views and partials used for the app. 
+This folder contains the html and partial files for the views used for the app. 
 
 __bower_components/__ folder - This folder contains the bower package files
 
@@ -105,15 +108,17 @@ __less/__ folder - This folder contains the LESS files for the core styles and b
   - __bootstrap/__
     contains the LESS source files for Bootstrap
   - __main.less__
-    less include file (app + bootstrap less files)
+    less include file for the app (app + bootstrap less files)
+  - __frontend_onepage.less__
+    less include file for the frontend page (app + bootstrap less files)
 
 __node_modules/__ folder - This folder contains the node (npm) modules
 
 __Gruntfile.js__ - contains the grunt environment markup & tasks 
 
-__bower.json__ - contains the bower packages lists
+__bower.json__ - contains the bower packages list
 
-__package.json__ - contains the list of the running environment's necessary files,compilers (bower,grunt,less compiler)
+__package.json__ - contains the list of the running environment necessary files,compilers (bower,grunt,less compiler)
 
 
 ### How to run it?
@@ -129,7 +134,6 @@ npm install
 ```
 
 If you issue the following command the dependencies will be installed in the root directory of your project. (grunt,bower,grunt tasks...) 
-
 
 __2. Second step: (install javascript dependencies)__
 
@@ -199,6 +203,7 @@ all of which can be vital to both npm and to the end users of the package.
 ```
 
 ### Bower
+__Bower packages (bower.json)__
 Web sites are made of lots of things & frameworks, libraries, assets, utilities, 
 and rainbows. Bower manages all these things for you.
 
@@ -306,6 +311,7 @@ and rainbows. Bower manages all these things for you.
 
 
 ### Grunt
+__Grunt markup file (Gruntfile.js)__
 In one word: automation. The less work you have to do when performing repetitive
  tasks like minification, compilation, unit testing, linting, etc, the easier 
 your job becomes. After you've configured it through a Gruntfile, a task runner 
@@ -329,27 +335,39 @@ So this will start a local webserver and open up your default browser.
 grunt watch
 ```
 
-This command watches the changes of the app's files (/app folder). If they changed, it executes the
+This command watches the changes of the files of the app (/app folder). If they changed, it executes the
 following commands, after these your app in the browser automatically refresh.
 
 ``` js
 grunt clean
 ```
 
-This command empty the cache files.
+This command empties the cache files.
 
 ``` js
 grunt concat:libs
 ```
 
-This command concatenate the app's necessary & required files to one file. (jquery, angularjs plugins & libs)
+This command concatenates the necessary & required files of the app to one file. (jquery, angularjs plugins & libs)
 
 
 ``` js
 grunt concat:angular
 ```
 
-This command concatenate the app's necessary & required files to one file. (angularjs controllers,directives,routes,constants..)
+This command concatenates the necessary & required files of the app to one file. (angularjs controllers,directives,routes,constants..)
+
+``` js
+grunt cssmin
+```
+
+This command minifies the compiled css files of the app
+
+``` js
+grunt uglify
+```
+
+This command minifies the concatenated js files of the app
 
 
 ### Less
@@ -365,7 +383,7 @@ party tools that allow you to compile your files and watch for changes.
 grunt less
 ```
 
-This command compile the less files to css, that the app use. (app/styles/result.css)
+This command compiles the less files to css that the app use. (app/styles/result.css)
 
 
 CONTENT
@@ -556,7 +574,7 @@ documentation: https://docs.angularjs.org/guide/i18n
 
 ### + Add new lib/plugin
 
-####__+Add new default plugin__
+####__+ Add new default plugin__
 
 There is a possibility to define plugins and libraries which will be downloaded at the time of first page initialization
 (Example: AngularJS,Jquery,Oclazyload...)
@@ -771,7 +789,7 @@ HELPERS
 
 #### Padding & Margin
 
-| Name | Description          | Comment          |
+| Class | CSS          | Other options          |
 | ------------- | ----------- | ----------- |
 | no-p,no-padding | padding:0px | |
 | no-p-i | padding:0px !important | |
@@ -794,7 +812,7 @@ HELPERS
 
 #### Border separators for UI
 
-| Name | Description          | Comment          |
+| Class | CSS          | Other options          |
 | ------------- | ----------- | ----------- | |
 | box-border-r,b-b-r | border-right:1px solid #c1c1c1 !important | |
 | box-border-l,b-b-l | border-left:1px solid #c1c1c1 !important | |
@@ -807,7 +825,7 @@ HELPERS
 
 #### Borders
 
-| Name | Description          | Comment          |
+| Class | CSS          | Other options           |
 | ------------- | ----------- | ----------- | |
 | b-panel | border: 1px solid #d9d9d9 |  |
 | b-solid | border-style:solid |  |
@@ -822,7 +840,7 @@ HELPERS
 
 #### Border radius
 
-| Name | Description          | Comment          |
+| Class | CSS          | Other options           |
 | ------------- | ----------- | ----------- | |
 | no-b-rad     | .border-radius(0px,0px,0px,0px)| |
 | no-b-rad-i    | .border-radius(0px,0px,0px,0px) !important     | |
@@ -849,17 +867,17 @@ HELPERS
 
 #### Grid & gutter
 
-| Name | Description          |
+| Class | Description          |
 | ------------- | ----------- |
-| row-gap-5      | gutter 5px |
-| row-gap-10     | gutter 10px    |
-| row-panel-10 | panel 10px margin bottom |
+| row-gap-5      | gutter - 5px |
+| row-gap-10     | gutter - 10px    |
+| row-panel-10 | panel - margin bottom: 10px  |
 
 #### Position
 
 absolut pozicionalashoz egy section-on belul
 
-| Name | Description          | Comment          |
+| Class | Description          | Options          |
 | ------------- | ----------- | ----------- | |
 | item      | parent |  |
 | wrapper     | child, amire akarod a pozicionalast    | top,bottom,left,right |
