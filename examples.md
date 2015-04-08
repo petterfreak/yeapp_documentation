@@ -486,13 +486,13 @@ ide kell egy snippet hogyan kell letrehozni egy sidebar itemet
 
 ### Header
 
+- you can find here: ___app/views/main-header.html__
+
 #### Main header html
 
- - you can find here: ___app/views/main-header.html__
-
-- __there is 2 holder div__
-  - "navbar-header": this contains the logo & navbar for mobile(xs) view
-  - "navbar-collapse": this contains the collapsible menu (separeted to 2 section)
+- there is 2 holder div
+  - "__navbar-header__": this contains the logo & navbar for mobile(xs) view
+  - "__navbar-collapse__": this contains the collapsible menu (separeted to 2 section)
 
 
 
@@ -509,11 +509,11 @@ documentation: https://angular-ui.github.io/bootstrap/
 ### OcLazyLoad
 Load modules on demand (lazy load) in AngularJS
 
-YeApp angular/js modules constants in the __app/scripts/app_constatns.js__
+YeApp angular/js modules constants in the __app/scripts/app_constants.js__
 
-__ _REQUIRES__ - jquery or core libraries and they assets
+__ _REQUIRES__ - jquery or core libraries and their assets
 
-__ _MODULES__ - angular third party modules or wrappers 
+__ _MODULES__ - angular third party modules and/or wrappers 
 
 __ _CONTROLLERS__ - YeApp controllers (Notice: in oclazyload every controller is a module)
 
@@ -534,13 +534,13 @@ __Example:__
     })
 ```
 
+resolveRoute fgv egy seged fuggveny, hogy kevesebb koddal tudd betolteni a kivant js fileokat.
+Elso parametere (array): betolteni kivant angularJS/controllers/modules from _MODULES and _CONTROLLERS
+Second parameter: array of Jquery/3rd party libs from _REQUIRES
+
 resolveRoute() method helps you to not use the oclazyload's difficult mechanism. 
 resolveRoute() has 2 parameter. First parameter: array of angularJS/controllers/modules from _MODULES and _CONTROLLERS
 Second parameter: array of Jquery/3rd party libs from _REQUIRES
-
-resolveRoute fgv segit abban, hogy ne kelljen az oclazyload nehezkes, bonyolult strukturajat alkalmazni
-Ezert a resolveRoute elso parametereben (tombkent) megadhatod milyen angular lib-eket/controllereket szeretnel betolteni a  listábol,
-masodik parameterkent (tombkent), hogy milyen egyeb jquery vagy js lib-et szeretnel a _REQUIRES listabol
 
 documentation: https://github.com/angular-ui/ui-router
 
@@ -554,7 +554,7 @@ documentation: https://github.com/ncuillery/angular-breadcrumb
 
 documentation: https://docs.angularjs.org/guide/i18n
 
-### (Add) new lib/plugin
+### + Add new lib/plugin
 
 ####__+Add new default plugin__
 
@@ -569,7 +569,35 @@ __Note for CSS and other files __: You have to register/include your own css and
 
 ####__+Add new lazyload plugin__
 
-If you want to load files in run time, you have to define these files in the OcLazyLoad's section arrays. 
+If you want to load files in run time, you have to define these files in the OcLazyLoad's section arrays.  __app/scripts/app_constants.js__
+
+- Jquery or other 3rd party files (__ _REQUIRES__)
+``` js
+ ...
+ 'moment': ['../bower_components/moment/min/moment.min.js', '../bower_components/moment/min/moment-with-locales.min.js']
+ ...
+```
+
+- Angular modules (__ _MODULES__)
+``` js
+ ...
+{
+    name: 'textAngular',
+    files: ['../bower_components/textAngular/dist/textAngular-sanitize.min.js', '../bower_components/textAngular/dist/textAngular.min.js']
+}
+ ...
+```
+
+- App controllers/modules (__ _CONTROLLERS__)
+``` js
+ ...
+{
+    name: 'App.mail',
+    files: ['scripts/controllers/mail.js']
+}
+ ...
+```
+
 
 Ha futasi idoben akarsz betolteni fajlokat, akkor azokat elsonek bekell jegyezned az OcLazyLoad szekcioban felsorolt require tombokbe
 
