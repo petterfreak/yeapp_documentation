@@ -439,7 +439,7 @@ YeApp's html main structure
     </a>
 </li>
 ```
-- you can find this sctructure in the angular ui.router documentation http://http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-sref
+- you can find this sctructure in the angular ui.router documentation http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-sref
 
 #### Collapse item
 
