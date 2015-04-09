@@ -676,7 +676,7 @@ a webapp tudja, eppen melyik view-ban van
 
 ### Basic Layout
 
-If you want to use the basic scrolled layout, you dont have do anything
+If you want to use the basic scrolled layout, you do not have do anything
 
 ### Desktop Layout
 
@@ -742,31 +742,31 @@ Peldakent a blue.less fajl tartalma:
 
  * __.themeDefs(1)__ -  in a new file you must increment the value (az uj ertek mindig egyel nagyobbnak kell lennie mint az osszes theme osszege)
 
- * __@themeName__ - the theme's name (szokoz nem megengedett!)
+ * __@themeName__ - the name of the new theme (szokoz nem megengedett!)
 
- * __@themeBgColor__ - sidebar background color
+ * __@themeBgColor__ - background color of the sidebar
 
- * __@listItemHoverColor__ - sidebar hover bg color
+ * __@listItemHoverColor__ - background color of the hovered item of the sidebar
 
- * __@themeBorderRight__ - sidebar's right side separator border
+ * __@themeBorderRight__ - border right color of the sidebar
 
- * __@themeBorderBottom__ - navbar-brand ???
+ * __@themeBorderBottom__ - border-bottom of the navbar-brand
 
- * __@themeFontColor__ - sidebar's deafult font color
+ * __@themeFontColor__ - deafult font color of the sidebar
 
- * __@themeFontHoverColor__ - sidebar's default font hover color
+ * __@themeFontHoverColor__ - default font hover color of the sidebar
 
- * __@themeItemActiveBgColor__ - sidebar's active item bg color
+ * __@themeItemActiveBgColor__ - active item background color of the sidebar
 
- * __@themeItemActiveFontColor__ - sidebar's active item font color
+ * __@themeItemActiveFontColor__ - active item font color of the sidebar
 
- * __@listItemBorderTopColor__ - sidebar's item border top color
+ * __@listItemBorderTopColor__ - item border top color of the sidebar
 
- * __@listItemBorderBottomColor__ - sidebar's item border bottom color
+ * __@listItemBorderBottomColor__ - item border bottom color of the sidebar
 
- * __@listItemActiveBorderTopColor__ - sidebar's active item border top color
+ * __@listItemActiveBorderTopColor__ - active item border top color of the sidebar
 
- * __@listItemActiveBorderBottomColor__ - sidebar's active item border bottom color
+ * __@listItemActiveBorderBottomColor__ - active item border bottom color of the sidebar
 
 #### __3. step (bejegyezni az theme fajlt)__
 
@@ -774,11 +774,11 @@ Az uj fajlt a less/main.less fajl-ban be kell includolni
 
 #### __4. step (megnovelni a loop indexet)__
 
-Megkell novelned a __less/app/theme-generator.less__ a __@numberOfThemes__ erteket eggyel
+Megkell novelned a __less/app/theme-generator.less__ fajlban a __@numberOfThemes__ erteket eggyel
 
 
  * __Note__: ha barmilyen egyedi css-t akarsz berakni egy theme-be, csak jegyezd be egy less valtozokent, azonban figyelj arra, hogy ezt a variable-t a tobbi theme-ben is bekell jegyezned.
-Ezek utan mar csak bekell irnod a 'theme-genarator.less' fajlban, a buldThemes() fuggvenyen belul, hogy ezek az uj css tulajdonsagok hol helyezkedjenek el a DOM tree-ben.
+Ezek utan mar csak bekell irnod a 'theme-genarator.less' fajlba, a buldThemes() fuggvenyen belul, hogy ezek az uj css tulajdonsagok hol helyezkedjenek el a DOM tree-ben.
 
 
 
@@ -786,6 +786,8 @@ HELPERS
 ================
 
 ### Css helpers
+
+__Note: ha az other options oszlopban szamokat latsz, az azt jeleneti hogy a class neveben a szamot ezekre tetszolegesen kicserelheted (mertekegyseg: pixel (px))__
 
 #### Padding & Margin
 
@@ -808,7 +810,7 @@ HELPERS
 | p-t-b-3,p-b-t-3 | padding-top:3px !important & padding-bottom:3px !important | 5-10-15-20-30-50
 | p-r-l-3,p-l-r-3 | padding-right:3px !important & padding-left:3px !important | 5-10-15-20-30-50
 
- * Ezek a classok ervenyes a margin-okra is, csak kikell cserelni a p betut m-re
+__These classes are valid for margins too. Just replace the "p" character to "m"__
 
 #### Border separators for UI
 
@@ -822,6 +824,8 @@ HELPERS
 | box-border-l-light,b-b-l-l | border-left:1px solid #d9d9d9 !important | |
 | box-border-t-light,b-b-t-l | border-top:1px solid #d9d9d9 !important | |
 | box-border-b-light,b-b-b-l | border-bottom:1px solid #d9d9d9 !important | |
+
+- These classes helps you to separate your panels or boxes.
 
 #### Borders
 
@@ -875,21 +879,21 @@ HELPERS
 
 #### Position
 
-absolut pozicionalashoz egy section-on belul
-
 | Class | Description          | Options          |
 | ------------- | ----------- | ----------- | |
 | item      | parent |  |
-| wrapper     | child, amire akarod a pozicionalast    | top,bottom,left,right |
+| wrapper     | child    | top,bottom,left,right |
+
+- If you want an absolute position element in your DOM, just add the "item" class to your parent element. Az abszolut pozicionalasu element-nek csak add meg a wrapper classt, illetve az elhelyezkedeset (top,bottom,left,right)
 
 #### Table layout
-
-Ezek a classok mobil nezet kivetelevel az osszes resolutionben mukodnek
 
 | Name | Description          | Comment          |
 | ------------- | ----------- | ----------- | |
 | r-sm-table     | table display |  |
 | col-sm-cell,c-sm-cell |  table-cell display  |  |
+
+Ezek a classok mobil nezet kivetelevel az osszes resolutionben mukodnek
 
 CREDITS
 ================
