@@ -591,7 +591,7 @@ __Note for CSS and other files __: You have to register/include your own css and
 
 ####__+Add new lazyload plugin__
 
-If you want to load files in run time, you have to define these files in the OcLazyLoad's section arrays.  __app/scripts/app_constants.js__
+If you want to load files in run time, you have to define these files in the arrays  __app/scripts/app_constants.js__
 
 - Jquery or other 3rd party files (__ _REQUIRES__)
 ``` js
