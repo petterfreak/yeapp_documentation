@@ -836,7 +836,7 @@ HELPERS
 | no-b-t | border-top:none !important |  |
 | no-b-r | border-right:none !important |  |
 | no-b-l | border-left:none !important |  |
-| no-b-b | border-bottom:none !important |  |
+| no-b-b | border-bottom:none !important | &nbsp; |
 
 #### Border radius
 
