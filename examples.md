@@ -97,6 +97,10 @@ This folder contains the html and partial files for the views used for the app.
 
 __bower_components/__ folder - This folder contains the bower package files
 
+__documentation/__ folder - Here you will find the documentation of the template (You are reading now this)
+
+__frontend_onepage/__ Here you will find the files of the frontend(onapage) template
+
 __less/__ folder - This folder contains the LESS files for the core styles and bootstrap styles.
 
   - __app/__ 
@@ -104,7 +108,7 @@ __less/__ folder - This folder contains the LESS files for the core styles and b
   - __app/themes__ 
     contains the theme files and variables
   - __app/helpers__ 
-    contains the theme css helpers
+    contains the css helpers of the template
   - __bootstrap/__
     contains the LESS source files for Bootstrap
   - __main.less__
