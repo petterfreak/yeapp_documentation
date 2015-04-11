@@ -5,12 +5,28 @@ INTRODUCTION
 Thank you for purchasing. If you have any question or idea do not hesitate to ask us!
 
 ### YeApp features
-"YeApp" is a fully responsive admin web App built with AngularJS. It use 
-LESS CSS which makes it easy to modify.
+"YeApp" is a fully responsive admin web App built with AngularJS. This application is designed to robust/rich/large web applications. Flat,clean,dynamic,highly customizable.
 
-- AngularJS
-- 
-...
+- Flat UI/UX: inspirated by IOS & Apple
+- Responsive design: Bootstrap 3 (Angular Bootstrap)
+- Powerful layout: Box,Dock,Fold,Fix,Desktop... 
+- AngularJS: plugins only in angular way 
+- Solid workflow: Grunt tasks - Bower management
+- Built with LESS: easy modification
+- Nested routing & views: de-facto solution to flexible routing
+- Lazy loading: load modules on demand
+- Internationalization: 18n for your Angular apps
+- Dynamic breadcrumb: itegrated to the ui.router 
+- 3 runabble app: Tasks, Documents, Mail
+- 5 premade scheme: you can build your own with LESS
+- Localstorage support: save user settings in browser 
+- Angular modules: many useful and popular modules
+- CSS helpers: you can build unique widgets 
+- Unique ideas: many handcrafted pages
+- Separetad files: carefully designed app structure
+- Mobile states: managed from Angular app
+- Onepage frontend theme
+- and much more...
 
 ### Getting Started
 
@@ -66,13 +82,13 @@ This folder contains fonts and their files
 This folder contains icons and their files
 
 - __img/__
-This folder the theme images (dummy)
+This folder contains the dummy images of the theme
 
 - __js/__
 Here you will find JS files that do not have bower package wrapper
 
 - __lang/__
-This folder contains the json files use for translation.
+This folder contains language specific json files
 
 - __scripts/__
 Here you will find AngularJS files.
