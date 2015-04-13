@@ -360,8 +360,7 @@ and starts the web server where the application (will) run(s). So this will star
 grunt watch
 ```
 
-This command watches the changes in the files of the app (/app folder). If they changed, it executes the
-following commands, after these your app in the browser automatically refresh.
+Watches files for changes and runs tasks based on the changed files, after that your browser will refresh automatically.
 
 ``` js
 grunt clean
