@@ -1093,6 +1093,9 @@ __Note:__
 
 #### Grid & gutter
 
+Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on .rows.
+documentation: http://getbootstrap.com/css/#grid
+
 | Class | Description          |
 | ------------- | ----------- |
 | row-gap-5      | gutter - 5px |
