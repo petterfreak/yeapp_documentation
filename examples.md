@@ -418,9 +418,12 @@ konnyen megtalalhasd amit epp keresel. Pl. ha modositani vagy hozzaadni akarsz a
 css tulajdonsagaihoz, akkor azt itt keresd: less/app/tables.less
 
  - a bootstrap less fajljai azert vannak kulon idemasolva (less/bootstrap), hogy ne okozzanak verzio problemakat
+ - torekedtunk ra, hogy a bootstrap less fajljait ne modositsuk, ezert a bootstrap element-ek felul vannak irva a /theme konyvtarban
 
  - less/main.less az angular apphoz szukseges less fajlok gyujtohelye
  - less/frontend_onepage.less a frontendhez szukseges less fajlok gyujtohelye
+
+Note: ha egyedi komponenseket akarsz kesziteni, azokat kulon fajlba tedd, mert yeapp frissites eseten ne keruljenek felulirasra
 
 
 
