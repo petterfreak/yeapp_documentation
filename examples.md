@@ -2,30 +2,30 @@ INTRODUCTION
 ================
 
 ### Thanks
-Thank you for purchasing. If you have any question or idea do not hesitate to ask us!
+Thank you for purchasing. If you have any questions or suggestions do not hesitate to ask us!
 
 ### YeApp features
 "YeApp" is a fully responsive admin web App built with AngularJS. This application is designed to robust/rich/large web applications. Flat,clean,dynamic,highly customizable.
 
-- Flat UI/UX: inspirated by IOS & Apple
-- Responsive design: Bootstrap 3 (Angular Bootstrap)
-- Powerful layout: Box,Dock,Fold,Fix,Desktop... 
-- AngularJS: plugins only in angular way 
-- Solid workflow: Grunt tasks - Bower management
-- Built with LESS: easy modification
-- Nested routing & views: de-facto solution to flexible routing
-- Lazy loading: load modules on demand
-- Internationalization: 18n for your Angular apps
-- Dynamic breadcrumb: itegrated to the ui.router 
-- 3 runabble app: Tasks, Documents, Mail
-- 5 premade scheme: you can build your own with LESS
-- Localstorage support: save user settings in browser 
-- Angular modules: many useful and popular modules
-- CSS helpers: you can build unique widgets 
-- Unique ideas: many handcrafted pages
-- Separetad files: carefully designed app structure
-- Mobile states: managed from Angular app
-- Onepage frontend theme
+- __Flat UI/UX__: inspirated by IOS & Apple
+- __Responsive design__: Bootstrap 3 (Angular Bootstrap)
+- __Powerful layout__: Box,Dock,Fold,Fix,Desktop... 
+- __AngularJS__: plugins only in angular way 
+- __Solid workflow__: Grunt tasks - Bower management
+- __Built with LESS__: easy modification
+- __Nested routing & views__: de-facto solution to flexible routing
+- __Lazy loading__: load modules on demand
+- __Internationalization__: 18n for your Angular apps
+- __Dynamic breadcrumb__: itegrated to the ui.router 
+- __3 runnable app__: Tasks, Documents, Mail
+- __5 premade scheme__: you can build your own with LESS
+- __Localstorage support__: save user settings in browser 
+- __Angular modules__: many useful and popular modules
+- __CSS helpers__: you can build unique widgets 
+- __Unique ideas__: many handcrafted pages
+- __Separetad files__: carefully designed app structure
+- __Mobile states__: managed from Angular app
+- __Onepage frontend theme__
 - and much more...
 
 ### Getting Started
@@ -66,8 +66,8 @@ __File structure__
     >-- package.js
 ```
 
-__app/__ folder
- - This folder contains the web-application files.
+__app/__ 
+This folder contains the web-application files.
 
 - __dist/__
 Here you will find the concatenated JS files by grunt. (app.js & built.js)
@@ -111,19 +111,19 @@ Contains the static css files generated for the app (from less)
 - __views/__
 This folder contains the html and partial files for the views used for the app. 
 
-__bower_components/__ folder - This folder contains the bower package files
+__bower_components/__ This folder contains the bower package files
 
-__documentation/__ folder - Here you will find the documentation of the template (You are reading now this)
+__documentation/__ Here you will find the documentation of the template (You are reading now this)
 
 __frontend_onepage/__ Here you will find the files of the frontend(onapage) template
 
-__less/__ folder - This folder contains the LESS files for the core styles and bootstrap styles.
+__less/__ This folder contains the LESS files for the core styles and bootstrap styles.
 
   - __app/__ 
     contains the LESS source with the app components
-  - __app/themes__ 
+  - __app/themes/__ 
     contains the theme files and variables
-  - __app/helpers__ 
+  - __app/helpers/__ 
     contains the css helpers of the template
   - __bootstrap/__
     contains the LESS source files for Bootstrap
@@ -132,7 +132,7 @@ __less/__ folder - This folder contains the LESS files for the core styles and b
   - __frontend_onepage.less__
     less include file for the frontend page (app + bootstrap less files)
 
-__node_modules/__ folder - This folder contains the node (npm) modules
+__node_modules/__ This folder contains the node (npm) modules
 
 __Gruntfile.js__ - contains the grunt environment markup & tasks 
 
@@ -142,7 +142,7 @@ __package.json__ - contains the list of the running environment necessary files,
 
 
 ### How to run it?
-__1. First step: (prepare)__
+#### __1. First step: (install npm dependencies)__
 
 You will need to have installed Node.js (http://nodejs.org/) on your computer.
 
@@ -153,24 +153,26 @@ If you have installed Node.js, you'll need to run a command in the project's roo
 npm install
 ```
 
-If you issue the following command the dependencies will be installed in the root directory of your project. (grunt,bower,grunt tasks...) 
+If you issue the above command the dependencies will be installed in the root directory of your project __/node_modules/__. (grunt,bower,grunt tasks...) 
 
-__2. Second step: (install javascript dependencies)__
+#### __2. Second step: (install javascript dependencies)__
 
 ``` js
 bower install
 ```
 
-If you issue the following command the dependencies will be installed in the root directory of your project. (bower/js/angular JS components) 
+If you issue the above command the dependencies will be installed in the root directory of your project __/bower_components/__. (Angular/Jquery/3rd party modules/libs/frameworks) 
 
-__3. Third step: (run)__
+#### __3. Third step: (run)__
 
 ``` js
 grunt serve
 ```
 
-This command executes the Grunt's tasks and starts the nodejs server where the application (will) run(s).
+This command executes the Grunt's tasks and starts the web server where the application (will) run(s).
 So this will start a local webserver and open up your default browser.
+
+__Note: ha mas webszervert akarsz hasznalni (peldaul apache), akkor az npm es bower install utan csak masold be az egesz konyvtarat a webszerver kiszolgalo konyvtaraba__
 
 
 
@@ -343,19 +345,22 @@ of plugins to choose from, you can use Grunt to automate just about anything
 with a minimum of effort. If someone hasn't already built what you need, 
 authoring and publishing your own Grunt plugin to npm is a breeze.
 
-__Grunt commands:__
+If you haven't used Grunt before, be sure to check out the Getting Started guide, as it explains how to create a Gruntfile as well as install and use Grunt plugins.
+http://gruntjs.com/getting-started
+
+#### Grunt tasks
 
 ``` js
 grunt serve
 ```
-This command executes the Grunt's tasks and starts the nodejs server where the application (will) run(s).
-So this will start a local webserver and open up your default browser.
+This command executes the Grunt's tasks (clean,less,cssmin,concat:libs,concat:angular,uglify,connect:livereload,watch) 
+and starts the web server where the application (will) run(s). So this will start a local webserver and open up your default browser.
 
 ``` js
 grunt watch
 ```
 
-This command watches the changes of the files of the app (/app folder). If they changed, it executes the
+This command watches the changes in the files of the app (/app folder). If they changed, it executes the
 following commands, after these your app in the browser automatically refresh.
 
 ``` js
@@ -368,26 +373,33 @@ This command empties the cache files.
 grunt concat:libs
 ```
 
-This command concatenates the necessary & required files of the app to one file. (jquery, angularjs plugins & libs)
+This command concatenates the necessary & required files of the app into one file. (jquery, angularjs plugins & libs)
 
 
 ``` js
 grunt concat:angular
 ```
 
-This command concatenates the necessary & required files of the app to one file. (angularjs controllers,directives,routes,constants..)
+This command concatenates the necessary & required files of the app into one file. (angularjs controllers,directives,routes,constants..)
+
+``` js
+grunt less
+```
+
+This command compiles the less files to css that the app use. (app/styles/result.css)
+
 
 ``` js
 grunt cssmin
 ```
 
-This command minifies the compiled css files of the app
+This command minifies the compiled css files of the app that the less task generated
 
 ``` js
 grunt uglify
 ```
 
-This command minifies the concatenated js files of the app
+This command minifies the concatenated js files of the app that the concat tasks generated
 
 
 ### Less
@@ -399,11 +411,95 @@ and extendable.
 Less runs inside Node, in the browser and inside Rhino. There are also many 3rd 
 party tools that allow you to compile your files and watch for changes.
 
+__YeApp less fajljait megtalalod a less/ konyvtarban__
+
+ - a less fajlok komponensenkent szeparalva vannak kulon fajlokba, azert hogy nagyon
+konnyen megtalalhasd amit epp keresel. Pl. ha modositani vagy hozzaadni akarsz a table element
+css tulajdonsagaihoz, akkor azt itt keresd: less/app/tables.less
+
+ - a bootstrap less fajljai azert vannak kulon idemasolva (less/bootstrap), hogy ne okozzanak verzio problemakat
+
+ - less/main.less az angular apphoz szukseges less fajlok gyujtohelye
+ - less/frontend_onepage.less a frontendhez szukseges less fajlok gyujtohelye
+
+
+
+
+
+Main angular modules
+================
+
+### Angular Bootstrap
+Bootstrap components written in pure AngularJS by the AngularUI Team
+
+YeApp is using Angular bootstrap (ui and components)
+
+documentation: https://angular-ui.github.io/bootstrap/
+
+### OcLazyLoad
+Load modules on demand (lazy load) in AngularJS
+
+YeApp angular/js modules constants in the __app/scripts/app_constants.js__
+
+__ _REQUIRES__ - jquery or core libraries and their assets
+
+__ _MODULES__ - angular third party modules and/or wrappers 
+
+__ _CONTROLLERS__ - YeApp's controllers and modules
+
+documentation: https://github.com/ocombe/ocLazyLoad 
+
+### UI Router
+The de-facto solution to flexible routing with nested views
+
+YeApp's routes are placed in the __app/scripts/app_routes.js__ file.
+
+__Example route config:__
+
 ``` js
-grunt less
+    .state('components.sortable', {
+        url: "/sortable",
+        templateUrl: "views/ui-components/sortable.html",
+        resolve: resolveRoute(['ng-nestable','ui.sortable'],['jquery.nestable','jquery-ui'])
+    })
 ```
 
-This command compiles the less files to css that the app use. (app/styles/result.css)
+ - Az adott route-hoz termeszetesen betolthetsz futasi idoben fajlokat, oclazyload lib segitsegevel. Ezeket a resolve property megadasaval teheted meg.
+resolveRoute fuggveny segit neked eloallitani a resolve objektumot, oly modon, hogy csak a betoltendo script/module nevet adod at neki. (termeszetesen ez csak egy egyszerusites, nyugodtan hasznalhatod az oclazyload defafult resolve
+mechnanizmusat). 
+    - Elso parametere (array): betolteni kivant angularJS/controllers/modules a _MODULES vagy _CONTROLLERS tombbol (name property)
+    - Second parameter (array): betolteni kivant Jquery/3rd party libs a _REQUIRES tombbol (key)
+
+documentation: https://github.com/angular-ui/ui-router
+
+### UI Router breadcrumb
+
+YeApp ui-router is extended with ui-breadrcumb.
+
+Angular-breadcrumb is a module for AngularJS, which generates a breadcrumb for any page of your application. It is strongly based on the ui-router framework and its hierarchical tree of states.
+
+``` js
+    .state('home', {
+        url: '/home',
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl',
+        ncyBreadcrumb: {
+            label: 'Home page' // angular-breadcrumb's configuration
+        }
+    })
+```
+
+documentation: https://github.com/ncuillery/angular-breadcrumb
+
+### Internationalization
+
+You can find the language specific json files in the: __app/lang/__ folder
+
+angular-translate is an AngularJS module that makes your life much easier when it comes to i18n and l10n including lazy loading and pluralization.
+
+documentation & usage: http://angular-translate.github.io/
+
+
 
 
 CONTENT
@@ -411,10 +507,9 @@ CONTENT
 
 ### HTML structure
 
-YeApp's html main structure
+YeApp's main html DOM __app/index.html__
 
 ``` html
-
 #Angular app declaration
 <html ng-app="yeappApp">
 
@@ -465,9 +560,9 @@ YeApp's html main structure
 
 ### Sidebar
 
- - you can find here: ___app/views/main-sidebar.html__
+You can find here: __app/views/main-sidebar.html__
 
-#### Main sidebar structure
+#### Simple sidebar item
 
 ``` html
 <li ui-sref-active="active"> 
@@ -479,10 +574,9 @@ YeApp's html main structure
     </a>
 </li>
 ```
-- you can find this sctructure in the angular ui.router documentation 
-http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-sref
+ - angular ui.router documentation: http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-sref
 
-#### Collapse item
+#### Collapsible sidebar item
 
 ``` html
 <li ng-class="{opened:$state.includes('ui')}">  
@@ -509,9 +603,15 @@ http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-sr
                 </div>
             </a>
         </li>
+        ...
     </ul>
 </li>
 ```
+
+- ahogyan az elso sorban latod, a li taghoz hozzaadodik az 'opened' class ha az aktualis $state tartalmazza a ui route-ot
+- $state az egy globalis valtozo, ebben tarolodik el az aktualis route informacio
+- lenyilo menu szulojenek, vagyis az a tag-hoz keszitettunk egy directivat (collapse-menu), ami vezerli a lenyilo menu viselkedeset 
+- a lenyilo lista elso elemenek egy bizonyos "fold-header"-nek kell lennie, ugyanis ez fixeli a kulonbozo layout elrendezesek problemait, tartalma megegyezik a szulojenek tartalmaval 
 
 - as you can see the first line, you can define "ng-class" property here to detect this
 is collapsible item
@@ -520,94 +620,116 @@ is collapsible item
 - the child ul's first li has to be a "fold-header", this tag is a fixed layout helper for the sidebar. (same as the parent collapse item)
 
 
-ide kell egy snippet hogyan kell letrehozni egy sidebar itemet
-
 ### Header
 
-- you can find here: ___app/views/main-header.html__
+You can find here: ___app/views/main-header.html__
 
-#### Main header html
-
-- there is 2 holder div
+- a fajlban 2 fo div tag-et talalsz
   - "__navbar-header__": this contains the logo & navbar for mobile(xs) view
-  - "__navbar-collapse__": this contains the collapsible menu (separeted to 2 section)
+  - "__navbar-collapse__": this contains the collapsible menu & navbar for desktop/tablet
+
+### Views/Partials
+
+Ebben a konyvtarban talalod meg a view-kat: __app/views/__
+
+Osszes view komponensenkent szetvannak valogatva a kereshetoseg megkonnyitese erdekeben.
+Peldaul: a mail apphoz tartozo html view-kat a app/views/mail konyvtarban fogod megtalalni.
 
 
 
 AngularJS
 ================
 
-### Angular Bootstrap
-Bootstrap components written in pure AngularJS by the AngularUI Team
+### Global app scope - Main.js 
 
-YeApp is using Angular bootstrap (ui and components)
+Yeapp-nak van egy root controllere ami a content rootjahoz a body-hoz van definialva.
+A root controller -t megtalalod ... mappaban.
 
-documentation: https://angular-ui.github.io/bootstrap/
+A kovetkezo pontokban soroljuk fel a hasznos fuggvenyeket amiket tartalmaz az app. Ezeket 
+a fuggvenyeket es valtozokat hasznalhatod kozvetlenul a gyerek controllerekben.
+A felsoroltakon kivul vannak meg egyeb valtozok es fuggvenyek amiket csak a demo app-hoz 
+hasznalunk.
 
-### OcLazyLoad
-Load modules on demand (lazy load) in AngularJS
+#### function getLayoutType() 
+- ez adja vissza az alkalmazason belul, hogy epp melyik view-ban vagyunk (xs,sm,md,lg).
+ Ezeket a breakpoint-okat, az index.html body tagjaban a breakpoint-on belul adhatod meg.
 
-YeApp angular/js modules constants in the __app/scripts/app_constants.js__
-
-__ _REQUIRES__ - jquery or core libraries and their assets
-
-__ _MODULES__ - angular third party modules and/or wrappers 
-
-__ _CONTROLLERS__ - YeApp controllers (Notice: in oclazyload every controller is a module)
-
-documentation: https://github.com/ocombe/ocLazyLoad 
-
-### UI Router
-The de-facto solution to flexible routing with nested views
-
-YeApp routes are in the __app/scripts/app_routes.js__
-
-__Example:__
+#### function getDefaultSettings() 
+- ez a fuggveny adja vissza az app default beallitasait. Ami a kovetkezokeppen nez ki:
 
 ``` js
-    .state('components.sortable', {
-        url: "/sortable",
-        templateUrl: "views/ui-components/sortable.html",
-        resolve: resolveRoute(['ng-nestable','ui.sortable'],['jquery.nestable','jquery-ui'])
-    })
+{
+    showSettingsBtn: true,
+    settings: {
+        theme: 'themeBlue',
+        showSideBar: true,
+        showApps: false,
+        dockAside: false,
+        boxedLayout: false,
+        fixedHeader: true,
+        fixedAside: false,
+        desktopLayout: false,
+        lang: 'en_US'
+    },
+    themes: [
+        {
+            name: 'blue theme',
+            theme: 'themeBlue'
+        },
+        {
+            name: 'grey theme',
+            theme: 'themeGrey'
+        },
+        {
+            name: 'yellow theme',
+            theme: 'themeYellow'
+        },
+        {
+            name: 'dark grey theme',
+            theme: 'themeDarkGrey'
+        },
+        {
+            name: 'neon green theme',
+            theme: 'themeNeonGreen'
+        }
+    ]
+}
 ```
 
-resolveRoute fgv egy seged fuggveny, hogy kevesebb koddal tudd betolteni a kivant js fileokat.
-Elso parametere (array): betolteni kivant angularJS/controllers/modules from _MODULES and _CONTROLLERS
-Second parameter: array of Jquery/3rd party libs from _REQUIRES
 
-resolveRoute() method helps you to not use the oclazyload's difficult mechanism. 
-resolveRoute() has 2 parameter. First parameter: array of angularJS/controllers/modules from _MODULES and _CONTROLLERS
-Second parameter: array of Jquery/3rd party libs from _REQUIRES
+   - __settings__: layout propertyk amik jelenteserol a Layouts/classes menupont alatt tudsz bovebben olvasni.
+   - __settings.theme__: az aktualisan hasznalt theme neve
+   - __themes__: app-on belul valaszthato scheme-ek
 
-documentation: https://github.com/angular-ui/ui-router
+#### function setDesktopLayout()
 
-### UI Router breadcrumb
+Ez a fuggveny gondoskodik, a desktop layout beallitasarol. Bovebben a layouts/desktop layout menupont alatt tudsz rola olvasni.
 
-YeApp ui-router is extended with ui-breadrcumb.
+#### function changeLanguage()
 
-documentation: https://github.com/ncuillery/angular-breadcrumb
+E fuggveny segitsegevel tudod futas idoben valtoztatni a translate nyelvet. 
 
-### Internationalization
+#### variable mobileLayout:bool 
 
-documentation: https://docs.angularjs.org/guide/i18n
+Ezzel a valtozo segitsegevel tudod lekerdezni barhol az appon belul, hogy most mobile nezetben vagyunk-e.
+Erteke true or false lehet
 
-### + Add new lib/plugin
 
-####__+ Add new default plugin__
+### Add new lib/plugin
+
+####__+Add new default plugin__
 
 There is a possibility to define plugins and libraries which will be downloaded at the time of first page initialization
 (Example: AngularJS,Jquery,Oclazyload...)
 
-You can easily add files in the following file
-Konnyeden hozzaadhatsz ilyen js fajlokat:
-'Gruntfile.js' fajlban a 'concat/libs/src' reszben bekell jegyezned az eleresi utvonalat egy tomb elemkent
+You can easily add files in the following file: 
+'Gruntfile.js' fajlban a 'concat/libs/src' reszben kell bejegyezned a betoltendo lib/framework eleresi utvonalat egy tomb elemekent
 
 __Note for CSS and other files __: You have to register/include your own css and other custom asset files in the head of main index.html.
 
 ####__+Add new lazyload plugin__
 
-If you want to load files in run time, you have to define these files in the arrays  __app/scripts/app_constants.js__
+Mint ahogyan azt mar az Oclazyload menupont alatt emlitettuk, lehetoseg van futasi idoben betolteni js/other fajlokat. Ebben a fajlban talalod meg:  __app/scripts/app_constants.js__
 
 - Jquery or other 3rd party files (__ _REQUIRES__)
 ``` js
@@ -636,38 +758,83 @@ If you want to load files in run time, you have to define these files in the arr
  ...
 ```
 
-
-Ha futasi idoben akarsz betolteni fajlokat, akkor azokat elsonek bekell jegyezned az OcLazyLoad szekcioban felsorolt require tombokbe
-
-### +Add new controller/view
+### Add new controller/view...
 
  * __Controllers__ : __app/scripts/controllers__ folder
 
  * __Views__ : __app/views__ folder
 
+Ha uj controllert akarsz letrehozni csak keszits egy fajlt a controllers mappaban a controller nevevel. Es az elozo pontban emlitett _CONTROLLERS tombe rakd be.
+
+Note: Oclazyload-ban minden futasi idoben betoltott angular komponensnek egy module controllerekent kell lennie. Tehat tulajdonkeppen a controllers konyvtarban module-ok vannak.
+
 ### Custom directives
 
-Keszitettunk par egyedi direktivat a theme-hez.
-
-#### Directives (app/scripts/directives/directives.js)
- * __collapseMenu__ ez manageli a sidebar menu lenyilo mechanizmusat
- * __sparkLine__ sparkline jquery chart-hoz direktiva
- * __morris__ morris chart-hoz direktiva
- * __iCheck__ icheck pluginhoz direktiva
- * __resizeBrowser__ ez a direktiva, ha bejegyezed propertykent barmelyik tagbe, akkor browser resize eseten broadcastolja az esemeny bekovetkeztet
- * __vectorMap__ jquery vectormap direktivaja
+Keszitettunk par egyedi direktivat a theme-hez. __app/scripts/directives/directives.js__
 
 
-### root Controller - Main.js 
+#### __collapseMenu__  
+ez a sidebar collapse tulajdonsagaert felel
 
-As you can see in the content section, YeApp has a root controller that helps you to define methods,variables 
-that you can reach in every child controllers & views.
-__YeApp's global variables and methods:__
+#### __sparkLine__  
+sparkline jquery chart-hoz direktiva.
 
-Mint ahogyan lathattod a struktura reszben, YeApp-ban van egy root controllere (MainCtrl), ami seged controllerkent viselkedik.
-Ide akar bejegyezhetsz konstansokat,fuggvenyeket amiket elakarsz erni barmelyik gyerek controllerben.
-Itt lathatod a mi altalunk megadott, demohoz hasznalt fuggvenyeket, valtozokat
+``` html
+<spark-line data="sparkline.inline1.data" options="sparkline.inline1.options"></spark-line>
+```
 
+Parameters:
+ - data
+ - options
+
+#### __morris__  
+morris chart-hoz direktiva
+
+``` html
+<div id="morris4" morris type="'donut'" options="morris.donut" ></div>
+```
+
+Parameters:
+ - type
+ - options
+
+#### __iCheck__  
+icheck pluginhoz direktiva
+
+``` html
+<label class="icheck"><input type="checkbox" i-check ng-model="test"> Option one </label>
+```
+
+#### __resizeBrowser__ 
+ez a direktiva a body taghez van bejegyezve, hogy browser(window) resize eseten az appunkon belul is ertesljuk rola
+esemeny neve: resizeBrowser
+
+``` html
+<html ng-app="yeappApp" resize-browser>
+```
+
+#### __resizeElement__
+ezt a direktivat egyeb dom elementekhez jegyezheted fel, es resize eseten broadcastolni fogja az esemenyt
+esemeny neve: resizeDomElement
+
+#### __focusMe__
+ez a direktiva azert felel, hogy ha az ng-model-ben megadott ertek true lesz, akkor a focus arra az elementre kerul (form control-oknal hasznaljuk)
+
+``` html
+<input type="text" class="form-control" placeholder="What needs to be done?" ng-model="newTodo.text" focus-me="list.addMode">
+```
+
+#### __vectorMap__ 
+jquery vectormap direktivaja
+
+``` html
+<div vector-map options="mapOptions" width="'auto'" height="300" class="m-10"></div>
+```
+
+Parameters:
+ - options
+ - width
+ - height
 
 
 LAYOUTS
@@ -696,14 +863,15 @@ a webapp tudja, eppen melyik view-ban van
 
 ### Basic Layout
 
-If you want to use the basic scrolled layout, you do not have do anything
+If you want to use the basic scrolled layout, you do not have do anything.
 
-### Desktop Layout
+### Desktop/Fixed Layout
 
-If you want to use the desktop (boxed) layout, in your angular controller
-you have to call the root controller's (MainCtrl) method, and you have to 
-change false when you changed the route (subscribe to the destroy event
-in your controller and set false the desktop layout)
+Ha a desktop layout(fixed)-ot akarod hasznalni, akkor az adott routeodhoz tartozo controllerben megkell hivnod a
+root controller (MainCtrl) setDesktopLayout() fuggvenyet true ertekkel. Illetve fel kell iratkoznod a scope destroy esemenyere es a fuggvenyt
+false ertekkel kell meghivnod, hogy az app visszaallitsa a default layout-ot. 
+
+(A fuggveny csak hozzadja a 'desktop-layout' class-t a body tagnek)
 
 ``` js
     $scope.setDesktopLayout(true);
@@ -713,7 +881,9 @@ in your controller and set false the desktop layout)
     });
 ```
 
-This function adds the desktop layout class to the body tag
+Desktop layout variaciokra peldakat talalsz a app/views/starters mappaban.
+
+Note: ez a layout xs resolutionre nem ervenyes.
 
 
 THEME COLORS
@@ -807,9 +977,12 @@ HELPERS
 
 ### Css helpers
 
-__Note: ha az other options oszlopban szamokat latsz, az azt jeleneti hogy a class neveben a szamot ezekre tetszolegesen kicserelheted (mertekegyseg: pixel (px))__
+__Note:__
 
-#### Padding & Margin
+ - ha az other options oszlopban szamokat latsz, az azt jeleneti hogy a class neveben a szamokat ezekre tetszolegesen kicserelheted (mertekegyseg: pixel (px))
+ - ha vesszovel felsorolva latsz class-okat azt jelenti hogy mind2re igaz az adott css szabaly
+
+#### Padding
 
 | Class | CSS          | Other options          |
 | ------------- | ----------- | ----------- |
@@ -827,10 +1000,29 @@ __Note: ha az other options oszlopban szamokat latsz, az azt jeleneti hogy a cla
 | p-b-3 | padding-bottom:3px !important | 5-10-15-20-30-50 |
 | p-r-3 | padding-right:3px !important | 5-10-15-20-30-50 |
 | p-l-3 | padding-left:3px !important | 5-10-15-20-30-50 |
-| p-t-b-3,p-b-t-3 | padding-top:3px !important & padding-bottom:3px !important | 5-10-15-20-30-50
-| p-r-l-3,p-l-r-3 | padding-right:3px !important & padding-left:3px !important | 5-10-15-20-30-50
+| p-t-b-3,p-b-t-3 | padding-top:3px !important & padding-bottom:3px !important | 5-10-15-20-30-50 |
+| p-r-l-3,p-l-r-3 | padding-right:3px !important & padding-left:3px !important | 5-10-15-20-30-50 |
 
-__These classes are valid for margins too. Just replace the "p" character to "m"__
+#### Margin
+
+| Class | CSS          | Other options          |
+| ------------- | ----------- | ----------- |
+| no-m,no-margin | margin:0px | |
+| no-m-i | margin:0px !important | |
+| no-m-b | margin-bottom:0px !important | |
+| no-m-t | margin-top:0px !important | |
+| no-m-l | margin-left:0px !important | |
+| no-m-r | margin-right:0px !important | |
+| no-m-t-b,no-m-b-t | margin-top:0px !important & margin-bottom:0px !important | |
+| no-m-r-l,no-m-l-r | margin-right:0px !important & margin-left:0px !important | |
+| m-3 | margin:3px | 5-10-15-20-30-50 | 
+|m-3-i | margin:3px !important | 5-10-15-20-30-50 |
+|m-t-3 | margin-top:3px !important | 5-10-15-20-30-50 |
+|m-b-3 | margin-bottom:3px !important | 5-10-15-20-30-50 |
+|m-r-3 | margin-right:3px !important | 5-10-15-20-30-50 |
+|m-l-3 | margin-left:3px !important | 5-10-15-20-30-50 |
+|m-t-b-3,p-b-t-3 | margin-top:3px !important & margin-bottom:3px !important | 5-10-15-20-30-50 |
+|m-r-l-3,p-l-r-3 | margin-right:3px !important & margin-left:3px !important | 5-10-15-20-30-50 |
 
 #### Border separators for UI
 
@@ -843,7 +1035,7 @@ __These classes are valid for margins too. Just replace the "p" character to "m"
 | box-border-r-light,b-b-r-l | border-right:1px solid #d9d9d9 !important | |
 | box-border-l-light,b-b-l-l | border-left:1px solid #d9d9d9 !important | |
 | box-border-t-light,b-b-t-l | border-top:1px solid #d9d9d9 !important | |
-| box-border-b-light,b-b-b-l | border-bottom:1px solid #d9d9d9 !important | |
+| box-border-b-light,b-b-b-l | border-bottom:1px solid #d9d9d9 !important | &nbsp; |
 
 - These classes helps you to separate your panels or boxes.
 
@@ -857,10 +1049,17 @@ __These classes are valid for margins too. Just replace the "p" character to "m"
 | b-dotted | border-style:dotted |  |
 | b-1px | border-width:1px | 2-3-4-5 |
 | b-lt | border-color:#ddd |  |
+| no-border,no-b | border-color: transparent;border: none; | |
+| no-border-i,no-b-i| border-color: transparent !important;border: none !important; | |
 | no-b-t | border-top:none !important |  |
 | no-b-r | border-right:none !important |  |
 | no-b-l | border-left:none !important |  |
 | no-b-b | border-bottom:none !important | &nbsp; |
+| b-primary | border-color: primary | &nbsp; |
+| b-success | border-color: success | &nbsp; |
+| b-info | border-color: info | &nbsp; |
+| b-warning | border-color: warning | &nbsp; |
+| b-danger | border-color: danger | &nbsp; |
 
 #### Border radius
 
@@ -897,6 +1096,8 @@ __These classes are valid for margins too. Just replace the "p" character to "m"
 | row-gap-10     | gutter - 10px    |
 | row-panel-10 | panel - margin bottom: 10px  |
 
+- ezeket a class-okat a bootstrap row class-hoz keszitettuk
+
 #### Position
 
 | Class | Description          | Options          |
@@ -910,8 +1111,11 @@ __These classes are valid for margins too. Just replace the "p" character to "m"
 
 | Name | Description          | Comment          |
 | ------------- | ----------- | ----------- | |
-| r-sm-table     | table display |  |
-| col-sm-cell,c-sm-cell |  table-cell display  |  |
+| r-sm-table     | display:table  |  |
+| col-sm-cell,c-sm-cell |  display:table-cell   | &nbsp;  |
+| v-middle |  vertical-align: middle   | &nbsp;  |
+| v-top |  vertical-align: top   | &nbsp;  |
+| v-bottom |  vertical-align: bottom   | &nbsp;  |
 
 Ezek a classok mobil nezet kivetelevel az osszes resolutionben mukodnek
 
@@ -1003,10 +1207,10 @@ CREDITS
 
 UPGRADING
 ================
-We offer free support and updates to our lovely customers!
+We offer free support and updates to our valuable customers!
 
 SUPPORT
 ================
-You can request for support via themeforest comments
+You can request for support via themeforest comments.
 
 We will assist you any problem you face while buidling your app via YeApp framework.
