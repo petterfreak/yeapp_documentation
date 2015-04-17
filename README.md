@@ -43,13 +43,15 @@ __File structure__
     |   >-- lang/
     |   >-- scripts/
     |   |   >-- controllers/
+    |   |   |   >-- main.js
     |   |   >-- directives/
-    |   |   >-- directives/   
+    |   |   >-- filters/   
     |   |   >-- app.js 
     |   |   >-- app_constants.js
     |   |   >-- app_routes.js
     |   >-- styles/
     |   >-- views/
+    |   >-- index.html
     >-- bower_components/
     >-- documentation/
     >-- frontend_onepage/
@@ -70,47 +72,24 @@ __File structure__
 __app/__ 
 This folder contains the web-application files.
 
-- __dist/__
-Here you will find the concatenated JS files by grunt. (app.js & built.js)
-
-- __dummy/__
-This folder contains dummy json files for the demo pages
-
-- __fonts/__
-This folder contains fonts and their files
-
-- __icons/__
-This folder contains icons and their files
-
-- __img/__
-This folder contains the dummy images of the theme
-
-- __js/__
-Here you will find JS files that do not have bower package wrapper
-
-- __lang/__
-This folder contains language specific json files
-
-- __scripts/__
-Here you will find AngularJS files.
-  - __controllers/__ 
-    contains the controllers of the app
-  - __directives/__
-    contains the directives of the app
-  - __filters/__
-    contains the filters of the app
-  - __app.js__
-    main root angular module and its dependency container (set config and run options)
-  - __app_constants.js__
-    contains the lazy loading files structure of the app (angular modules,controllers,jquery libs..etc)
-  - __app_routes.js__
-    contains the routes of the app (ui-router)
-
-- __styles/__
-Contains the static css files generated for the app (from less)
-
-- __views/__
-This folder contains the html and partial files for the views used for the app. 
+- __dist/__ Here you will find the concatenated JS files by grunt. (app.js & built.js)
+- __dummy/__ This folder contains dummy json files for the demo pages
+- __fonts/__ This folder contains fonts and their files
+- __icons/__ This folder contains icons and their files
+- __img/__ This folder contains the dummy images of the theme
+- __js/__ Here you will find JS files that do not have bower package wrapper
+- __lang/__ This folder contains language specific json files
+- __scripts/__ Here you will find AngularJS files.
+  - __controllers/__ contains the controllers of the app
+    - __main.js__ root controller    
+  - __directives/__ contains the directives of the app
+  - __filters/__  contains the filters of the app
+  - __app.js__ main root angular module and its dependency container (set config and run options)
+  - __app_constants.js__ contains the lazy loading files structure of the app (angular modules,controllers,jquery...)
+  - __app_routes.js__ contains the routes of the app (ui-router)
+- __styles/__ Contains the static css files generated for the app (from less)
+- __views/__ This folder contains the html and partial files for the views used for the app. 
+- __index.html__ Main index.html (the app's entry point)
 
 __bower_components/__ This folder contains the bower package files
 
