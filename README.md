@@ -135,7 +135,7 @@ __less/__ This folder contains the LESS files for the core styles and bootstrap 
 
 __node_modules/__ This folder contains the node (npm) modules
 
-__.bowerrc__ - tells where is the bower_components folder
+__.bowerrc__ - Shows where the bower_components folder is
 
 __Gruntfile.js__ - contains the grunt environment markup & tasks 
 
@@ -147,7 +147,7 @@ __package.json__ - contains the list of the running environment necessary files,
 ### How to run it?
 #### __1. First step: (install npm dependencies)__
 
-You will need to have installed Node.js (http://nodejs.org/) on your computer.
+You will need to install Node.js (http://nodejs.org/) on your computer.
 
 If you have installed Node.js, you'll need to run a command in the project's root folder:
 (Please note that any commands must be ran from the project's root folder.)
@@ -156,7 +156,7 @@ If you have installed Node.js, you'll need to run a command in the project's roo
 npm install
 ```
 
-If you issue the above command the dependencies will be installed in the root directory of your project __/node_modules/__. (grunt,bower,grunt tasks...) 
+If you issue the above command, the dependencies will be installed in the root directory of your project __/node_modules/__. (grunt,bower,grunt tasks...) 
 
 #### __2. Second step: (install javascript dependencies)__
 
@@ -164,7 +164,7 @@ If you issue the above command the dependencies will be installed in the root di
 bower install
 ```
 
-If you issue the above command the dependencies will be installed in the root directory of your project __/bower_components/__. (Angular/Jquery/3rd party modules/libs/frameworks) 
+If you issue the above command, the dependencies will be installed in the root directory of your project __/bower_components/__. (Angular/Jquery/3rd party modules/libs/frameworks) 
 
 #### __3. Third step: (run)__
 
@@ -379,7 +379,7 @@ Watches files for changes and runs tasks based on the changed files, after that 
 grunt clean
 ```
 
-This command eraises the cache files.
+This command erases the cache files.
 
 ``` js
 grunt concat:libs
@@ -437,7 +437,7 @@ party tools that allow you to compile your files and watch for changes.
 
 #### You can find YeApp's less files in the /less directory
 
-- LESS files can be found easily because they are separated per component basis.
+- LESS files can easily be found because they are separated per component basis.
 For example a table element specific less file can be found under the less/app/tables.less path.
 
 - The less files of bootstrap are copied into under __/less/bootstrap__ path to avoid the conflict of different versions (during bower update).
@@ -497,7 +497,7 @@ resolveRoute() method helps you to create the resolve object by passing the name
 - __first parameter : array__: the names of the angularJS/controller/module what you want to load from the __ _MODULES__ and __ _CONTROLLERS__ arrays.
 - __second parameter : array__: the keys of the Jquery/3rd party file(s) what you want to load from __ _REQUIRES__ array.
 
-Note: You can read more about these arrays <a href="#">here</a>
+Note: You can read more about these arrays <a href="#angularjs-add-new-libplugin">here</a>
 
 Note: of course this method just an util, you can use the
 OcLazyLoad's default load mechanism. documentation: https://github.com/ocombe/ocLazyLoad#works-well-with-your-router
@@ -731,7 +731,7 @@ documentation: https://github.com/snapjay/angularjs-breakpoint
 }
 ```
 
-   - __settings__: this contains the properties of the app. More information can be found about the layout: <a href="">here</a>
+   - __settings__: this contains the properties of the app. More information can be found about the layout: <a href="#layouts-classes">here</a>
    - __settings.theme__: actual theme's name
    - __settings.lang__: default language
    - __themes__: Color schemes which can be selected inside the demo app
@@ -739,7 +739,7 @@ documentation: https://github.com/snapjay/angularjs-breakpoint
 
 #### $rootScope.setDesktopLayout()
 
-This function provides the desktop (application) layout for the app. More information can be found about this: HERE
+This function provides the desktop (application) layout for the app. More information can be found about this: <a href="#layouts-desktopfixed-layout">HERE</a>
 
 
 #### $rootScope.changeLanguage()
@@ -758,7 +758,7 @@ This variable contains true if the app is in mobile view. Otherwise its value is
 There is a possibility to define plugins and libraries which will be downloaded at the time of first page initialization
 (Example: AngularJS,Jquery,Oclazyload...)
 
-You can easily add files in the following file: 'Gruntfile.js'. Just add the specifiy paths of the files. 
+You can easily add files in the following file: 'Gruntfile.js'. Just add the paths of the files. 
 
 __Jquery/Other 3rd party js files__: __concat.libs.src__
 ``` js
