@@ -352,7 +352,7 @@ and starts the web server where the application (will) run(s). So this will star
 grunt watch
 ```
 
-Watches files for changes and runs tasks based on the changed files, after that your browser will be refreshed automatically.
+This watches files for changes and runs tasks based on the changed files after your browser will be refreshed automatically.
 
 ``` js
 grunt clean
@@ -427,7 +427,7 @@ For example a table element specific less file can be found under the less/app/t
 
 - The __less/frontend_onepage.less__ stands for the includes of mandatory dependencies of the Frontend.
 
-__Note: If you would like to create custom components, we strongly advise that to put the new content into a different file, otherwise it will be overridden during the update.__
+__Note: If you would like to create custom components, we strongly advise you that to put the new content into a different file, otherwise it will be overridden during the update.__
 
 
 
