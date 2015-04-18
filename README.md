@@ -452,6 +452,8 @@ __ _MODULES__ - Angular's third party modules and/or wrappers
 
 __ _CONTROLLERS__ - YeApp's controllers and modules
 
+Note: You can read more about these arrays <a href="#angularjs-add-new-libplugin">here</a>
+
 documentation: https://github.com/ocombe/ocLazyLoad 
 
 ### UI Router
@@ -764,7 +766,7 @@ __Note for CSS and other files: You have to register/include your own css and ot
 
 ####__+Add new lazyload plugin__
 
-As it was mentioned previously (here), the files can be downloaded during running time. (on demand). You can easily add files here: __app/scripts/app_constants.js__
+As it was mentioned previously, the files can be downloaded during running time. (on demand). You can easily add files here: __app/scripts/app_constants.js__
 
 
 #### Jquery or other 3rd party files [_REQUIRES array]
