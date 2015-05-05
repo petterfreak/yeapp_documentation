@@ -33,14 +33,26 @@ Thank you for puchasing this framework. If you have any questions or suggestions
 __File structure__
 
 ``` html
-    >-- app/
-    |   >-- dist/
-    |   >-- dummy/
+    +-- angular_app
+    +-- bower_components/
+    +-- documentation/
+    +-- grunt_tasks/
+    +-- js_vendors/
+    +-- landingpage/
+    +-- master/
+    |   +-- css/
+    |   +-- datas/
     |   >-- fonts/
     |   >-- icons/
     |   >-- img/
-    |   >-- js/
-    |   >-- lang/
+    |   >-- l10n/
+    |   >-- less/
+    |      >-- app/
+           |   |   >-- skins/
+           |   |   >-- helpers/
+           |   |   >-- bootstrap/
+           |   |   >-- main.less
+           |   |   >-- frontend_onepage.less
     |   >-- scripts/
     |   |   >-- controllers/
     |   |   |   >-- main.js
@@ -49,19 +61,8 @@ __File structure__
     |   |   >-- app.js 
     |   |   >-- app_constants.js
     |   |   >-- app_routes.js
-    |   >-- styles/
     |   >-- views/
     |   >-- index.html
-    >-- bower_components/
-    >-- documentation/
-    >-- frontend_onepage/
-    >-- less/
-    |   >-- app/
-    |   |   >-- skins/
-    |   |   >-- helpers/
-    |   >-- bootstrap/
-    |   >-- main.less
-    |   >-- frontend_onepage.less
     >-- node_modules/ 
     >-- .bowerrc
     >-- Gruntfile.js
