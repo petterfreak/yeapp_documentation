@@ -33,34 +33,33 @@ Thank you for puchasing this framework. If you have any questions or suggestions
 __File structure__
 
 ``` html
-    +-- angular_app
-    +-- bower_components/
-    +-- documentation/
-    +-- grunt_tasks/
-    +-- js_vendors/
-    +-- landingpage/
-    +-- master/
-    |   +-- css/
-    |   +-- datas/
+    >-- angular_app
+    >-- bower_components/
+    >-- documentation/
+    >-- grunt_tasks/
+    >-- js_vendors/
+    >-- landingpage/
+    >-- master/
+    |   >-- css/
+    |   >-- datas/
     |   >-- fonts/
     |   >-- icons/
     |   >-- img/
     |   >-- l10n/
     |   >-- less/
     |      >-- app/
-           |   |   >-- skins/
-           |   |   >-- helpers/
-           |   |   >-- bootstrap/
-           |   |   >-- main.less
-           |   |   >-- frontend_onepage.less
+    |      >-- bootstrap/
+    |      >-- app.less
+    |      >-- landingpage.less
     |   >-- scripts/
+    |   |   >-- apps/
     |   |   >-- controllers/
-    |   |   |   >-- main.js
     |   |   >-- directives/
     |   |   >-- filters/   
-    |   |   >-- app.js 
-    |   |   >-- app_constants.js
-    |   |   >-- app_routes.js
+    |   |   >-- app.root.js 
+    |   |   >-- app.config.routes.js
+    |   |   >-- app.config.layzload.js
+    |   |   >-- app.js
     |   >-- views/
     |   >-- index.html
     >-- node_modules/ 
@@ -69,49 +68,48 @@ __File structure__
     >-- bower.js
     >-- package.js
 ```
-
-__app/__ 
-This folder contains the web-application files.
-
-- __dist/__ Here you will find the concatenated JS files by grunt. (app.js & built.js)
-- __dummy/__ This folder contains dummy json files for the demo pages
-- __fonts/__ This folder contains fonts and their files
-- __icons/__ This folder contains icons and their files
-- __img/__ This folder contains the dummy images of the theme
-- __js/__ Here you will find JS files that do not have bower package wrapper
-- __lang/__ This folder contains language specific json files
-- __scripts/__ Here you will find AngularJS files.
-  - __controllers/__ contains the controllers of the app
-    - __main.js__ root controller    
-  - __directives/__ contains the directives of the app
-  - __filters/__  contains the filters of the app
-  - __app.js__ main root angular module and its dependency container (set config and run options)
-  - __app_constants.js__ contains the lazy loading files structure of the app (angular modules,controllers,jquery...)
-  - __app_routes.js__ contains the routes of the app (ui-router)
-- __styles/__ Contains the static css files generated for the app (from less)
-- __views/__ This folder contains the html and partial files for the views used for the app. 
-- __index.html__ Main index.html (the app's entry point)
+__angular_app/__ This folder contains the compiled files. This files are ready to deploy on your server.
 
 __bower_components/__ This folder contains the bower package files
 
 __documentation/__ Here you will find the documentation of the template (You are reading now this)
 
-__frontend_onepage/__ Here you will find the files of the frontend(onapage) template
+__grunt_tasks/__ This folder contains the Grunt's runnable tasks.
 
-__less/__ This folder contains the LESS files for the core styles and bootstrap styles.
+__js_vendors/__ Here you will find JS files that do not have bower package wrapper
 
+__landingpage/__ Here you will find the files of the landingpage template
+
+__master/__ 
+This folder contains the web-application files.
+
+- __css/__ Contains the static css files generated for the app (from less)
+- __datas/__ This folder contains dummy json files for the demo pages
+- __fonts/__ This folder contains fonts and their files
+- __icons/__ This folder contains icons and their files
+- __img/__ This folder contains the dummy images of the theme
+- __l10n/__ This folder contains language specific json files
+- __less/__ This folder contains the LESS files for the core styles and bootstrap styles.
   - __app/__ 
     contains the LESS source with the app components
-  - __app/skins/__ 
-    contains the skin's files and variables
-  - __app/helpers/__ 
-    contains the css helpers of the template
   - __bootstrap/__
     contains the LESS source files for Bootstrap
   - __main.less__
     less include file for the app (app + bootstrap less files)
-  - __frontend_onepage.less__
-    less include file for the frontend page (app + bootstrap less files)
+  - __landingpage.less__
+    less include file for the landingpage (app + bootstrap less files)
+
+- __scripts/__ Here you will find AngularJS files.
+  - __apps/__ contains the source files of the runnable apps
+  - __controllers/__ contains the controllers of the app    
+  - __directives/__ contains the directives of the app
+  - __filters/__  contains the filters of the app
+  - __app.js__ main root angular module and its dependency container (set config and run options)
+  - __app.config.lazyload.js__ contains the lazy loading files structure of the app (angular modules,controllers,jquery...)
+  - __app.config.routes.js__ contains the routes of the app (ui-router)
+  - __app.root.js__ contains the root controller of the app
+- __views/__ This folder contains the html and partial files for the views used for the app. 
+- __index.html__ Main index.html (the app's entry point)
 
 __node_modules/__ This folder contains the node (npm) modules
 
@@ -122,7 +120,6 @@ __Gruntfile.js__ - contains the grunt environment markup & tasks
 __bower.json__ - contains the bower packages list
 
 __package.json__ - contains the list of the running environment necessary files,compilers (bower,grunt,less compiler)
-
 
 ### How to run it?
 #### __1. First step: (install npm dependencies)__
