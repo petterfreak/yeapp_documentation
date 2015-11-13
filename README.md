@@ -7,7 +7,7 @@ Thank you for puchasing this framework. If you have any questions or suggestions
 ### YeApp features
 "YeApp" is a fully responsive admin web App built with AngularJS. This application is designed to robust/rich/large web applications. Flat,clean,dynamic,highly customizable.
 
-- __Flat UI/UX__: inspirated by IOS & Apple
+- __Flat UI/UX__: inspired by IOS & Apple & Google's Material design
 - __Responsive design__: Bootstrap 3 (Angular Bootstrap)
 - __Powerful layout__: Box,Dock,Fold,Fix,Desktop... 
 - __AngularJS__: plugins only in angular way 
@@ -34,44 +34,52 @@ Getting started
 ### Structure
 
 ``` html
-    >-- angular_app
     >-- bower_components/
+    >-- dist/
     >-- documentation/
     >-- grunt_tasks/
     >-- js_vendors/
-    >-- landingpage/
-    >-- master/
-    |   >-- css/
-    |   >-- datas/
-    |   >-- fonts/
-    |   >-- icons/
-    |   >-- img/
-    |   >-- l10n/
+    >-- node_modules/ 
+    >-- src/
+    |   >-- admin/
+    |   |   >-- css/
+    |   |   >-- datas/
+    |   |   >-- fonts/
+    |   |   >-- icons/
+    |   |   >-- img/
+    |   |   >-- l10n/
+    |   |   >-- scripts/
+    |   |   |   >-- apps/
+    |   |   |   >-- controllers/
+    |   |   |   >-- directives/
+    |   |   |   >-- filters/   
+    |   |   |   >-- app.config.js 
+    |   |   |   >-- app.config.layzload.controllers.js
+    |   |   |   >-- app.config.layzload.modules.js
+    |   |   |   >-- app.config.layzload.requires.js
+    |   |   |   >-- app.config.routes.js
+    |   |   |   >-- app.js
+    |   |   |   >-- app.root.js 
+    |   |   |   >-- app.run.js 
+    |   |   >-- views/
+    |   |   >-- index.html
+    |   >-- landingpage/
     |   >-- less/
     |   |   >-- app/
     |   |   >-- bootstrap/
+    |   |   >-- frontend/
     |   |   >-- app.less
     |   |   >-- landingpage.less
-    |   >-- scripts/
-    |   |   >-- apps/
-    |   |   >-- controllers/
-    |   |   >-- directives/
-    |   |   >-- filters/   
-    |   |   >-- app.root.js 
-    |   |   >-- app.config.routes.js
-    |   |   >-- app.config.layzload.js
-    |   |   >-- app.js
-    |   >-- views/
-    |   >-- index.html
-    >-- node_modules/ 
+    |   |   >-- support.less
+    |   >-- support/
     >-- .bowerrc
     >-- Gruntfile.js
     >-- bower.js
     >-- package.js
 ```
-__angular_app/__ This folder contains the compiled files. This files are ready to deploy on your server
-
 __bower_components/__ This folder contains the bower package files
+
+__dist/__ This folder contains the compiled files. This files are ready to deploy on your server
 
 __documentation/__ Here you will find the documentation of the template (You are reading now this)
 
@@ -79,9 +87,7 @@ __grunt_tasks/__ This folder contains the Grunt's tasks
 
 __js_vendors/__ Here you will find JS files that do not have bower package wrapper
 
-__landingpage/__ Here you will find the files of the landingpage template
-
-__master/__ 
+__src/admin/__ 
 This folder contains the web-application source files
 
 - __css/__ Contains the static css files generated for the app (compiled less)
@@ -90,27 +96,41 @@ This folder contains the web-application source files
 - __icons/__ This folder contains icons and their files
 - __img/__ This folder contains the dummy images of the theme
 - __l10n/__ This folder contains language specific json files
-- __less/__ This folder contains the LESS files for the core styles and bootstrap styles
-  - __app/__ 
-    contains the LESS source for the app
-  - __bootstrap/__
-    contains the LESS source files for Bootstrap
-  - __main.less__
-    less include file for the app (app + bootstrap less files)
-  - __landingpage.less__
-    less include file for the landingpage (app + bootstrap less files)
 
 - __scripts/__ Here you will find AngularJS files
   - __apps/__ contains the source files of the runnable apps
   - __controllers/__ contains the controllers of the app    
   - __directives/__ contains the directives of the app
   - __filters/__  contains the filters of the app
-  - __app.js__ root angular module and its dependency container (settings and options)
-  - __app.config.lazyload.js__ contains the lazy loading files structure of the app (angular modules,controllers,jquery...)
+  - __app.config.js__ contains the main config of the app   
+  - __app.config.lazyload.controllers.js__ contains the lazy loading files structure of the app (controllers)
+  - __app.config.lazyload.modules.js__ contains the lazy loading files structure of the app (angular modules) 
+  - __app.config.lazyload.requires.js__ contains the lazy loading files structure of the app (jquery libs,modules...) 
   - __app.config.routes.js__ contains the routes of the app (ui-router)
+  - __app.js__ root angular module and its dependency container
   - __app.root.js__ contains the root controller of the app
+  - __app.run.js__ contains the run config of the app    
 - __views/__ This folder contains the html and partial files for the views used for the app
 - __index.html__ Main index.html (the app's entry point)
+
+__src/landingpage/__ Here you will find the files of the landingpage template
+
+__src/less/__ This folder contains the LESS files for the core styles and bootstrap styles
+
+  - __app/__ 
+  contains the LESS source for the app
+  - __bootstrap/__
+  contains the LESS source files for Bootstrap
+  - __frontend/__ 
+  contains the LESS source for the frontend templates (landingpage + support)
+  - __app.less__
+  less include file for the app (app + bootstrap less files)
+  - __landingpage.less__
+  less include file for the landingpage (app + bootstrap less files)
+  - __support.less__
+  less include file for the support template (app + bootstrap less files)
+
+__src/support/__ Here you will find the files of the support/ticketing/knowledgebase template
 
 __node_modules/__ This folder contains the node (npm) modules
 
@@ -175,7 +195,7 @@ This command executes the Grunt's tasks (build:dev) and starts the web server wh
 So this will start a local webserver and open up your default browser.
 
 __Note: If you would like to use any other type of webserver (for example apache,tomcat) then 
-you have to copy the "master" or "angular_app" and "bower_components" ans "js_vendors" directories into the Webserver's www directory.__
+you have to copy the "src/admin" or "dist/admin" and "bower_components" and "js_vendors" directories into the Webserver's www directory.__
 
 ### Grunt tasks
 
@@ -191,7 +211,7 @@ and starts the web server where the application (will) run(s). So this will star
 ``` js
 build:angular
 ```
-This command builds the app into the __angular_app/__ folder. (concatenation,compile less,copy files,uglify,cssmin)
+This command builds the app into the __dist/admin__ folder. (concatenation,compile less,copy files,uglify,cssmin)
 This files are ready to deploy on your server.
 
 __Note: Grunt's tasks are separated per component basis. They will be found in this folder:  /grunt_tasks __
@@ -208,13 +228,15 @@ and extendable.
 - LESS files can easily be found because they are separated per component basis.
 For example a table element specific less file can be found under the less/app/tables.less path.
 
-- The less files of bootstrap are copied into under __master/less/bootstrap__ path to avoid the conflict of different versions (during bower update).
+- The less files of bootstrap are copied into under __src/less/bootstrap__ path to avoid the conflict of different versions (during bower update).
 
-- We strive for not modifying the Bootstrap's files directly. The bootstrap specific less files are overridden by the application what you can find under __master/less/app__ directory.
+- We strive for not modifying the Bootstrap's files directly. The bootstrap specific less files are overridden by the application what you can find under __src/less/app__ directory.
 
-- The __master/less/main.less__ file stands for the includes of mandatory dependencies of the App.
+- The __src/less/app.less__ file stands for the includes of mandatory dependencies of the App.
 
-- The __master/less/landingpage.less__ stands for the includes of mandatory dependencies of the Frontend.
+- The __src/less/landingpage.less__ stands for the includes of mandatory dependencies of the Landing page.
+
+- The __src/less/support.less__ stands for the includes of mandatory dependencies of the Support center template.
 
 __Note: If you would like to create custom components, we strongly advise you that to put the new content into a different file, otherwise it will be overridden during the update.__
 
@@ -232,13 +254,13 @@ documentation: https://angular-ui.github.io/bootstrap/
 ### OcLazyLoad
 Load modules on demand (lazy load) in AngularJS
 
-YeApp's constants of angular/js modules are placed in this file: __app/scripts/app_constants.js__
+YeApp's constants of angular/js modules are placed in this file: __src/admin/scripts/__
 
-__ _REQUIRES__ - Jquery or core libraries and their assets
+__ _REQUIRES__ - app.config.lazyload.requires.js > Jquery or core libraries and their assets
 
-__ _MODULES__ - Angular's third party modules and/or wrappers 
+__ _MODULES__ - app.config.lazyload.modules.js > Angular's third party modules and/or wrappers 
 
-__ _CONTROLLERS__ - YeApp's controllers and modules
+__ _CONTROLLERS__ - app.config.lazyload.controllers.js > YeApp's controllers and modules
 
 Note: You can read more about these arrays <a href="#angularjs-add-new-libplugin">here</a>
 
@@ -247,7 +269,7 @@ documentation: https://github.com/ocombe/ocLazyLoad
 ### UI Router
 The de-facto solution to flexible routing with nested views
 
-YeApp's routes are placed in the __master/scripts/app.config.routes.js__ file.
+YeApp's routes are placed in the __src/admin/scripts/app.config.routes.js__ file.
 
 #### __Example of route config:__
 
@@ -295,7 +317,7 @@ documentation: https://github.com/ncuillery/angular-breadcrumb
 
 ### Internationalization
 
-You can find the language specific json files in the: __master/l10n/__ folder
+You can find the language specific json files in the: __src/admin/l10n/__ folder
 
 angular-translate is an AngularJS module that makes your life much easier when it comes to i18n and l10n including lazy loading and pluralization.
 
@@ -394,14 +416,14 @@ There is a possibility to define plugins and libraries which will be downloaded 
 
  - __PRODUCTION__: You can easily add files in the following file: __grunt_tasks/concat.js__. Just add the paths of the files. 
 
- - __DEVELOPMENT__: You can easily include files in the following file: __master/index.html__
+ - __DEVELOPMENT__: You can easily include files in the following file: __src/admin/index.html__
 
 __Note for CSS and other files: You have to register/include your own css and other custom asset files in the head of main index.html.__
 
 
 ####__+Add new lazyload plugin__
 
-As it was mentioned previously, the files can be downloaded during running time. (on demand). You can easily add files here: __master/scripts/app.config.lazyload.js__
+As it was mentioned previously, the files can be downloaded during running time. (on demand).
 
 #### Jquery or other 3rd party files [_REQUIRES array]
 
@@ -435,18 +457,18 @@ As it was mentioned previously, the files can be downloaded during running time.
 
 ### Add new controller/view...
 
- If you need a new Controller, just create a file in the __/master/scripts/controllers/__ folder. After these, you do not forget to add it into the _CONTROLLERS array.
+ If you need a new Controller, just create a file in the __/src/admin/scripts/controllers/__ folder. After these, you do not forget to add it into the _CONTROLLERS array.
 
-__Note: in OcLazyLoad every controller has to be wrapped by a module. Actually the files in the /master/scripts/controllers folder are controllers but its wrapped by a module__
+__Note: in OcLazyLoad every controller has to be wrapped by a module. Actually the files in the /src/admin/scripts/controllers folder are controllers but its wrapped by a module__
 
- * __Controllers__ : __master/scripts/controllers__ folder
+ * __Controllers__ : __src/admin/scripts/controllers__ folder
 
- * __Views__ : __master/views__ folder
+ * __Views__ : __/src/admin/views__ folder
 
 
 ### Custom directives
 
-We made a few useful & unique directives for the app. __master/scripts/directives/__
+We made a few useful & unique directives for the app. __/src/admin/scripts/directives/__
 
 #### __appNavigation__  
 
@@ -563,7 +585,7 @@ CONTENT
 
 ### Main HTML structure
 
-YeApp's main html DOM __master/index.html__
+YeApp's main html DOM __/src/admin/index.html__
 
 ``` html
 #Angular app declaration
@@ -640,7 +662,7 @@ YeApp's main html DOM __master/index.html__
 
 ### Sidebar
 
-You can find here: __master/views/app.aside.html__
+You can find here: __/src/admin/views/app.aside.html__
 
 #### Simple sidebar item
 
@@ -695,7 +717,7 @@ angular ui.router documentation: http://angular-ui.github.io/ui-router/site/#/ap
 
 ### Header
 
-You can find here: ___master/views/app.header.html__
+You can find here: ___/src/admin/views/app.header.html__
 
 - Two important 'main div-tag' can be found in the main-header.html
   - "__navbar-header__": this contains the logo and navbar for mobile(xs) view
@@ -703,10 +725,10 @@ You can find here: ___master/views/app.header.html__
 
 ### Views/Partials
 
-The views can be found in the following directory: __/master/views/__
+The views can be found in the following directory: __/src/admin/views/__
 
 The views are separated per component basis to speed up the searches after them.
-For example The html views of mailing service can be found in the following directory /master/views/mail
+For example The html views of mailing service can be found in the following directory /src/admin/views/mail
 
 
 LAYOUTS
@@ -748,7 +770,7 @@ You have to add the __app-layout-application__ directive to your root element of
 </div>
 ```
 
-Variation of layout samples can be found in the next folder: __master/views/starters__
+Variation of layout samples can be found in the next folder: __/src/admin/views/starters__
 
 Note: This layout cannot be seen in a Mobile resolution.
 
@@ -758,19 +780,19 @@ THEME COLORS
 
 ### Less
 
-YeApp creates color variations with the help of Less. These files can be found in the next folder: __master/less/app/skins__
+YeApp creates color variations with the help of Less. These files can be found in the next folder: __/src/admin/less/app/skins__
 These are separated by different files for user friendly purpose. 
 
-The skin generator can be found in this file: __master/less/app/theme-generator.less__
+The skin generator can be found in this file: __/src/admin/less/app/theme-generator.less__
 
 ### Create custom skin/theme
 
 #### __1. step (create skin/theme file)__
 
-A new file needs to be created in the __master/less/app/skins__ folder by calling it with the new skin's name
+A new file needs to be created in the __/src/admin/less/app/skins__ folder by calling it with the new skin's name
 
 #### __2. step (customize the values of the variables)__
-For example: __master/less/app/skins/blue.less__
+For example: __/src/admin/less/app/skins/blue.less__
 
 ``` html
 .themeDefs(1){
